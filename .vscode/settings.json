@@ -1,0 +1,9 @@
+{
+    "Lua.diagnostics.globals": [
+        "table_contains",
+        "dump",
+        "split",
+        "script_path",
+        "files"
+    ]
+}

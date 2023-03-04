@@ -1,0 +1,4 @@
+settings = {
+    numDown=5,
+    shaftLength=4,
+}
