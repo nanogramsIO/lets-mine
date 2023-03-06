@@ -8,7 +8,7 @@
 --              not do anything. Otherwise, it will download all files
 --              listed in the version_file.
 
-require("utilities")
+require("general_utilities")
 
 local res = http.get("https://pastebin.com/raw/yAyJwhq5")
 local most_recent_version = split(res.readLine(), ":")[2]

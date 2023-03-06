@@ -9,6 +9,11 @@ HELLO = "hello"
 YES = {"y", "Y", "YES", "Yes", "yes"}
 NO = {"n", "N", "NO", "No", "no"}
 
+-- Check if input is an integer
+function is_int(x)
+   return (type(x) == "number") and (math.floor(x) == x)
+end
+
 -- Check of table tbl contains x
 function table_contains(tbl, x)
     local found = false
@@ -36,6 +41,18 @@ function split (inputstr, sep)
 function script_path()
     local str = debug.getinfo(2, "S").source:sub(2)
     return str:match("(.*/)")
+end
+
+-- Confirm configuration setting names and values
+function confirm_settings(settings)
+   assert(is_int(settings.miningLevel))
+   assert(is_int(settings.branchLength))
+   assert(is_int(settings.numBranches))
+   assert(is_int(settings.keepCobble))
+   assert(is_int(settings.keepDirt))
+   assert(is_int(settings.keepGravel))
+   assert(is_int(settings.keepSand))
+   assert(is_int(settings.keepLogs))
 end
 
 --

@@ -1,4 +1,10 @@
 settings = {
-    numDown=5,
-    shaftLength=4,
+    miningLevel=11,
+    branchLength=16,
+    numBranches=8,
+    keepCobble=0,
+    keepDirt=0,
+    keepGravel=0,
+    keepSand=0,
+    keepLogs=0,
 }
