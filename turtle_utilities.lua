@@ -8,37 +8,26 @@
 --              defined here.
 
 require("general_utilities")
+require("graph")
 
--- Go to a x, y, z position
+local map = Graph:new()
+
+-- Move to, without mining, an x, y, z position
 --  curr is a table of current x, y, and z values
 --  goal is a table of goal x, y, z values
-function go_to(curr, goal)
+function move_to(curr, goal)
+    if not map.nodes[tostring(curr.currX)][tostring(curr.currZ)] then
+        map:add_node(tostring(curr.currX), tostring(curr.currZ))
+    end
     local final = {}
     while (table.concat(curr) ~= table.concat(goal)) do
-        -- try y
-        if curr.y < goal.y then
         
-        elseif curr.y > goal.y then
-
-        end
-        -- try x
-        if curr.x < goal.x then
-        
-        elseif curr.x > goal.x then
-            
-        end
-        -- try z
-        if curr.z < goal.z then
-        
-        elseif curr.z > goal.z then
-            
-        end
-        -- go y if no other path
-
-        -- go x if no other path
-
-        -- go z if no other path
     end
+end
+
+-- Mine directly to an x, y, z position
+function mine_to()
+
 end
 
 -- Return to where the turtle was mining before
